@@ -20,7 +20,7 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
     {beskrivelse}
   </p>
 
-  <p class="cards-item-number">{varenummer}</p>
+  <p class="cards-item-number">varenr. {varenummer}</p>
   <div>
     <img src="../src/svg/place.svg" alt="lokation"/>
     <p class="cardslocation">{lokation}</p>
@@ -28,17 +28,17 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
 
 <div class="prices">
     <div>
-        <h3 class="cardspricedescription"></h3>
+        <h3 class="cardspricedescription">Nuværende bud</h3>
 <p class="cardspricetext">{nupris}</p>
     </div>
  
     <div>
-        <h3 class="cardspricedescription"></h3>
+        <h3 class="cardspricedescription">Køb nu</h3>
 <p class="cardspricetext">{koebnupris}</p>
     </div>
 
     <div>
-        <h3 class="cardspricedescription"></h3>
+        <h3 class="cardspricedescription">Vurderet til</h3>
 <p class="cardspricetext">{vurderingspris}</p>
     </div>
 </div>
@@ -75,6 +75,8 @@ article {
   display: flex;
   height: 379px;
   max-width: 1134px;
+  box-shadow: var(--shadow-card-shadow);
+  border-radius: var(--radius-border);
 }
 
 
