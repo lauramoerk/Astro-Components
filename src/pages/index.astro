@@ -1,4 +1,6 @@
 ---
+import Card from '../components/cards.astro'
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -11,5 +13,23 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+
+		<Card
+		deluxe={true}
+		nyproduceret={true}
+		titel="Ægget af Arne Jacobsen"
+		beskrivelse="Lounge hvilestol, 'Ægget', med vippeanordning. Betrukket med uld, drejelig midtersøjle med firpas fod af aluminium. Formgivet i 1958-59 som en del af totalindretningen i Hotel Royal København. 
+		Fremstillet og stemplet hos Fritz Hansen. Alm. brugsspor."
+		varenummer="2345678"
+		lokation="Roskilde, Store Hedevej"
+		koebnupris="21.500 DKK"
+		vurderingspris="25.000 DKK"
+		nupris="19.500 DKK"
+		tid="03:20:59"/>
+
+
+
+
+	
 	</body>
 </html>

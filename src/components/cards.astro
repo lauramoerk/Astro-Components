@@ -1,10 +1,10 @@
 ---
-import '../styles/global.css'
-const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, variant, koebnupris, vurderingspris, nupris, tid} = Astro.props;
+import '../styles/global.css';
+const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupris, vurderingspris, nupris, tid} = Astro.props;
 ---
 
-<article class={deluxe == true && "deluxe", nyproduceret == true && "nyproduceret"} data-variant={variant}>
-<img src="" alt="productimage">
+<article class={deluxe == true && "deluxe", nyproduceret == true && "nyproduceret"} >
+<img src="../jpg/productpic.jpg" alt="productimage">
 
 <div class="paddingcards"> 
    <div class="countdown">
