@@ -4,8 +4,11 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, variant,
 ---
 
 <article class={deluxe == true && "deluxe", nyproduceret == true && "nyproduceret"} data-variant={variant}>
+<img src="" alt="">
+
 <div class="paddingcards"> 
    <div class="countdown">
+    <img src="../svg/timer.svg" alt="timer">
     <p class="cards-time-horizontal">{tid}</p>
     </div> 
   {deluxe == true && <p class="cardstags">deluxe</p>}  {nyproduceret == true && <p class="cardstags">• nyproduceret</p>} 
@@ -19,6 +22,7 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, variant,
 
   <p class="cards-item-number">{varenummer}</p>
   <div>
+    <img src="../svg/place.svg" alt="lokation">
     <p class="cardslocation">{lokation}</p>
   </div>
 
