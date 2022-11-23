@@ -1,205 +1,183 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://use.typekit.net/scp8zgb.css");
 
 :root {
-    --font-weight-light: 300;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --font-weight-regular: 400;
-    --color-background-body: #ffffff;
-    --color-primary-body: #000000;
-    --color-secondary: #2B2B2B;
-    --color-accent: #E35E4B;
-    --color-text-gray: #656565;
-    --color-text-lightgray: #959595;
-    --color-text-white: #ffffff;
-    --spacing-margin-buttom: 150px;
-    --spacing-small: 10px;
-    --spacing-medium: 20px;
-    --spacing-button-padding-width: 45px;
-    --spacing-button-padding-height: 15px;
-    --radius-button-border: 5%;
-    --radius-border: 10%;
-    --shadow-card-shadow: 2px 2px 12px -5px rgba(0, 0, 0, 0.25);
-    --media-query-max-width-mobile: 600px;
-    --media-query-max-width-tablet: 1024px;
-    --font-family-body: lato;
-    --font-family-headings: Palatino Linotype, serif;
-    --font-size-xxxxl: 64.1px;
-    --font-size-xxxl: clamp(2.67rem, 2.8vw + 1.97rem, 4.21rem);
-    --font-size-xxl: clamp(2.14rem, 1.86vw + 1.67rem, 3.16rem);
-    --font-size-xl: clamp(1.71rem, 1.2vw + 1.41rem, 2.37rem);
-    --font-size-lg: clamp(1.37rem, 0.74vw + 1.18rem, 1.78rem);
-    --font-size-sm: clamp(0.7rem, 0.09vw + 0.68rem, 0.75rem);
-    --font-size-base: clamp(0.88rem, 0.23vw + 0.82rem, 1rem);
-    --font-size-md: clamp(1.09rem, 0.43vw + 0.98rem, 1.33rem);
-    --letter-spacing-varenr-spacing: 2px;
-    --line-height-sm: 16;
-    --line-height-base: 24;
-    --line-height-md: 24;
-    --line-height-lg: 32;
-    --line-height-xxxl: 56;
-    --line-height-xxl: 48;
-    --line-height-xl: 40;
-    --line-height-xxxxl: 88;
+  --font-weight-light: 300;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --color-background-body: #ffffff;
+  --color-primary-body: #000000;
+  --color-secondary: #2b2b2b;
+  --color-accent: #e35e4b;
+  --color-text-gray: #656565;
+  --color-text-lightgray: #959595;
+  --color-text-white: #ffffff;
+  --spacing-margin-buttom: 150px;
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-button-padding-width: 45px;
+  --spacing-button-padding-height: 15px;
+  --radius-button-border: 5%;
+  --radius-border: 10%;
+  --shadow-card-shadow: 2px 2px 12px -5px rgba(0, 0, 0, 0.25);
+  --media-query-max-width-mobile: 600px;
+  --media-query-max-width-tablet: 1024px;
+  --font-family-body: lato;
+  --font-family-headings: Palatino Linotype, serif;
+  --font-size-xxxxl: 64.1px;
+  --font-size-xxxl: clamp(2.67rem, 2.8vw + 1.97rem, 4.21rem);
+  --font-size-xxl: clamp(2.14rem, 1.86vw + 1.67rem, 3.16rem);
+  --font-size-xl: clamp(1.71rem, 1.2vw + 1.41rem, 2.37rem);
+  --font-size-lg: clamp(1.37rem, 0.74vw + 1.18rem, 1.78rem);
+  --font-size-sm: clamp(0.7rem, 0.09vw + 0.68rem, 0.75rem);
+  --font-size-base: clamp(0.88rem, 0.23vw + 0.82rem, 1rem);
+  --font-size-md: clamp(1.09rem, 0.43vw + 0.98rem, 1.33rem);
+  --letter-spacing-varenr-spacing: 2px;
+  /* --line-height-sm: 16px;
+  --line-height-base: 24px;
+  --line-height-md: 24px;
+  --line-height-lg: 32px;
+  --line-height-xxxl: 56px;
+  --line-height-xxl: 48px;
+  --line-height-xl: 40px;
+  --line-height-xxxxl: 88px; */
 }
 
- /* Aliases */
-
- .cardsh1 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
-    color:var(--color-primary-body);
-    line-height: var(--line-height-lg);
-  }
-
-  .cardsbodytext {
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-primary-body);
-    line-height: var(--line-height-md);
-  }
-
-  .cardspricetext{
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color:var(--color-primary-body);
-    line-height: var(--line-height-lg);
-  }
-
-  .cardspricedescription{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-primary-body);
-    line-height: var(--line-height-base);
-  }
-
-  .cardspricedescription{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-text-lightgray);
-    text-transform: uppercase;
-    line-height: var(--line-height-base);
-  }
-
-  .cardstags{
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-    color:var(--color-text-gray);
-    text-transform: uppercase;
-    line-height: var(--line-height-sm);
-  }
-
-  .cardslocation{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-text-lightgray);
-    line-height: var(--line-height-base);
-  }
-
-  .cards-item-number{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-text-lightgray);
-    line-height: var(--line-height-base);
-  }
-
-  .cards-item-number{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-light);
-    color:var(--color-text-lightgray);
-    line-height: var(--line-height-base);
-  }
-
-  .cards-time-horizontal{
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-primary-body);
-    line-height: var(--line-height-md);
-  }
-
-  .cards-time-vertical{
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-regular);
-    color:var(--color-text-white);
-    line-height: var(--line-height-md);
-  }
-
-  
-  .place-bid-button-text{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-bold);
-    color:var(--color-text-white);
-    line-height: var(--line-height-base);
-    text-transform: uppercase;
-  }
-
-.display-button{
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text-white);
-    line-height: var(--line-height-xxxl);
-    text-transform: uppercase;
+/* Aliases */
+body {
+    font-family: lato, sans-serif;
 }
 
-
-.display-text{
-    font-size: var(--font-size-xxxxl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-white);
-    line-height: var(--line-height-xxxxl);
+.cardsh1 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-body);
+  line-height: var(--line-height-lg);
 }
 
-.display-subtext{
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-regular);
-    color: var(--color-text-white);
-    line-height: var(--line-height-xxxl);
+.cardsbodytext {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-body);
+  line-height: var(--line-height-md);
 }
 
-.h1{
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-xxxl);
-    color: var(--color-primary-body);
- }
-
-.h2{
-    font-size: var(--font-size-xxl);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-xxl);
-    color: var(--color-primary-body);
-
+.cardspricetext {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-body);
+  line-height: var(--line-height-lg);
 }
 
-.link{
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-bold);
-    text-decoration: underline;
-    color: var(--color-accent);
-    line-height: var(--line-height-base);
+.cardspricedescription {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-body);
+  line-height: var(--line-height-base);
 }
 
-.prices{
-    border-top: solid 1px var(--color-background-body);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.cardspricedescription {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-lightgray);
+  text-transform: uppercase;
+  line-height: var(--line-height-base);
 }
 
-.countdown{
-position: absolute;
-top: 20px;
-right: 20px;
+.cardstags {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-gray);
+  text-transform: uppercase;
+  line-height: var(--line-height-sm);
 }
 
-article{
-    position: relative;
+.cardslocation {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-lightgray);
+  line-height: var(--line-height-base);
 }
 
+.cards-item-number {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-lightgray);
+  line-height: var(--line-height-base);
+}
 
+.cards-item-number {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-lightgray);
+  line-height: var(--line-height-base);
+}
 
+.cards-time-horizontal {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-body);
+  line-height: var(--line-height-md);
+}
+
+.cards-time-vertical {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-white);
+  line-height: var(--line-height-md);
+}
+
+.place-bid-button-text {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-white);
+  line-height: var(--line-height-base);
+  text-transform: uppercase;
+}
+
+.display-button {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-white);
+  line-height: var(--line-height-xxxl);
+  text-transform: uppercase;
+}
+
+.display-text {
+  font-size: var(--font-size-xxxxl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-white);
+  line-height: var(--line-height-xxxxl);
+}
+
+.display-subtext {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-white);
+  line-height: var(--line-height-xxxl);
+}
+
+.h1 {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xxxl);
+  color: var(--color-primary-body);
+}
+
+.h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-xxl);
+  color: var(--color-primary-body);
+}
+
+.link {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+  color: var(--color-accent);
+  line-height: var(--line-height-base);
+}
 
 
 

@@ -1,17 +1,17 @@
 ---
-import '../styles/global.css';
+// import '../styles/global.css';
 const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupris, vurderingspris, nupris, tid} = Astro.props;
 ---
 
-<article class={deluxe == true && "deluxe", nyproduceret == true && "nyproduceret"} >
-<img src="../jpg/productpic.jpg" alt="productimage"/>
+<article class={deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret"} >
+<img src="../src/jpg/productpic.jpg" alt="productimage"/>
 
 <div class="paddingcards"> 
    <div class="countdown">
-    <img src="../svg/timer.svg" alt="timer"/>
+    <img src="../src/svg/timer.svg" alt="timer"/>
     <p class="cards-time-horizontal">{tid}</p>
     </div> 
-  <div>{deluxe == true && <p class="cardstags">deluxe</p>}  {nyproduceret == true && <p class="cardstags">• nyproduceret</p>} </div>
+  <div id="alltags" >{deluxe == true && <p class="cardstags">deluxe</p>}  {nyproduceret == true && <p class="cardstags">• nyproduceret</p>} </div>
   <div>
     <p class="cards-time-horizontal"></p>
   </div>
@@ -22,7 +22,7 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
 
   <p class="cards-item-number">{varenummer}</p>
   <div>
-    <img src="../svg/place.svg" alt="lokation"/>
+    <img src="../src/svg/place.svg" alt="lokation"/>
     <p class="cardslocation">{lokation}</p>
   </div>
 
@@ -47,22 +47,36 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
 </article>
 
 <style>
-  article {
-    border: 2px solid black;
-  }
+
 
   .paddingcards{
 padding: var(--spacing-medium);
   }
-  .deluxe {
- color: red;
-  }
-  [data-variant="primary"] {
-    color:darkgreen;
-    background-color: var(--green-400);
-  }
-  [data-variant="secondary"] {
-    background-color: aqua;
-  }
+ 
+  .prices {
+  border-top: solid 1px var(--color-background-body);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.countdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+
+#alltags {
+  display: flex;
+}
+article {
+  position: relative;
+  display: flex;
+  height: 379px;
+  max-width: 1134px;
+}
+
+
 </style>
 
