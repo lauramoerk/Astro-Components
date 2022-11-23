@@ -1,0 +1,64 @@
+---
+import '../styles/global.css'
+const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, variant, koebnupris, vurderingspris, nupris, tid} = Astro.props;
+---
+
+<article class={deluxe == true && "deluxe", nyproduceret == true && "nyproduceret"} data-variant={variant}>
+<div class="paddingcards"> 
+   <div class="countdown">
+    <p class="cards-time-horizontal">{tid}</p>
+    </div> 
+  {deluxe == true && <p class="cardstags">deluxe</p>}  {nyproduceret == true && <p class="cardstags">• nyproduceret</p>} 
+  <div>
+    <p class="cards-time-horizontal"></p>
+  </div>
+  <h3 class="cardsh1">{titel}</h3>
+  <p class="cardsbodytext">
+    {beskrivelse}
+  </p>
+
+  <p class="cards-item-number">{varenummer}</p>
+  <div>
+    <p class="cardslocation">{lokation}</p>
+  </div>
+
+<div class="prices">
+    <div>
+        <h3 class="cardspricedescription"></h3>
+<p class="cardspricetext">{nupris}</p>
+    </div>
+
+    <div>
+        <h3 class="cardspricedescription"></h3>
+<p class="cardspricetext">{koebnupris}</p>
+    </div>
+
+    <div>
+        <h3 class="cardspricedescription"></h3>
+<p class="cardspricetext">{vurderingspris}</p>
+    </div>
+</div>
+
+ </div>   
+</article>
+
+<style>
+  article {
+    border: 2px solid black;
+  }
+
+  .paddingcards{
+padding: var(--spacing-medium);
+  }
+  .deluxe {
+ color: red;
+  }
+  [data-variant="primary"] {
+    color:darkgreen;
+    background-color: var(--green-400);
+  }
+  [data-variant="secondary"] {
+    background-color: aqua;
+  }
+</style>
+
