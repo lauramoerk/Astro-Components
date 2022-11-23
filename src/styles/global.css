@@ -181,6 +181,23 @@
     line-height: var(--line-height-base);
 }
 
+.prices{
+    border-top: solid 1px var(--color-background-body);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.countdown{
+position: absolute;
+top: 20px;
+right: 20px;
+}
+
+article{
+    position: relative;
+}
+
 
 
 
