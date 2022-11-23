@@ -17,8 +17,8 @@
   --spacing-medium: 20px;
   --spacing-button-padding-width: 45px;
   --spacing-button-padding-height: 15px;
-  --radius-button-border: 5%;
-  --radius-border: 10%;
+  --radius-button-border: 5px;
+  --radius-border: 10px;
   --shadow-card-shadow: 2px 2px 12px -5px rgba(0, 0, 0, 0.25);
   --media-query-max-width-mobile: 600px;
   --media-query-max-width-tablet: 1024px;
