@@ -26,6 +26,7 @@
     --media-query-max-width-tablet: 1024px;
     --font-family-body: lato;
     --font-family-headings: Palatino Linotype, serif;
+    --font-size-xxxxl: 64.1px;
     --font-size-xxxl: clamp(2.67rem, 2.8vw + 1.97rem, 4.21rem);
     --font-size-xxl: clamp(2.14rem, 1.86vw + 1.67rem, 3.16rem);
     --font-size-xl: clamp(1.71rem, 1.2vw + 1.41rem, 2.37rem);
@@ -40,5 +41,148 @@
     --line-height-lg: 32;
     --line-height-xxxl: 56;
     --line-height-xxl: 48;
-    --line-height-xl: 40
-    }
+    --line-height-xl: 40;
+    --line-height-xxxxl: 88;
+}
+
+ /* Aliases */
+
+ .cardsh1 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color:var(--color-primary-body);
+    line-height: var(--line-height-lg);
+  }
+
+  .cardsbodytext {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-primary-body);
+    line-height: var(--line-height-md);
+  }
+
+  .cardspricetext{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color:var(--color-primary-body);
+    line-height: var(--line-height-lg);
+  }
+
+  .cardspricedescription{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-primary-body);
+    line-height: var(--line-height-base);
+  }
+
+  .cardspricedescription{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-text-lightgray);
+    text-transform: uppercase;
+    line-height: var(--line-height-base);
+  }
+
+  .cardstags{
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color:var(--color-text-gray);
+    text-transform: uppercase;
+    line-height: var(--line-height-sm);
+  }
+
+  .cardslocation{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-text-lightgray);
+    line-height: var(--line-height-base);
+  }
+
+  .cards-item-number{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-text-lightgray);
+    line-height: var(--line-height-base);
+  }
+
+  .cards-item-number{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
+    color:var(--color-text-lightgray);
+    line-height: var(--line-height-base);
+  }
+
+  .cards-time-horizontal{
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-primary-body);
+    line-height: var(--line-height-md);
+  }
+
+  .cards-time-vertical{
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+    color:var(--color-text-white);
+    line-height: var(--line-height-md);
+  }
+
+  
+  .place-bid-button-text{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color:var(--color-text-white);
+    line-height: var(--line-height-base);
+    text-transform: uppercase;
+  }
+
+.display-button{
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-white);
+    line-height: var(--line-height-xxxl);
+    text-transform: uppercase;
+}
+
+
+.display-text{
+    font-size: var(--font-size-xxxxl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-white);
+    line-height: var(--line-height-xxxxl);
+}
+
+.display-subtext{
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-white);
+    line-height: var(--line-height-xxxl);
+}
+
+.h1{
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-xxxl);
+    color: var(--color-primary-body);
+ }
+
+.h2{
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-xxl);
+    color: var(--color-primary-body);
+
+}
+
+.link{
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    text-decoration: underline;
+    color: var(--color-accent);
+    line-height: var(--line-height-base);
+}
+
+
+
+
+
+
