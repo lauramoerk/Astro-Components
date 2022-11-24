@@ -11,7 +11,7 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
     <img src="../src/svg/timer.svg" alt="timer"/>
     <p class="cards-time-horizontal">{tid}</p>
     </div> 
-  <div id="alltags" >{deluxe == true && <p class="cardstags">deluxe</p>}  {nyproduceret == true && <p class="cardstags">• nyproduceret</p>} </div>
+  <div id="alltags" >{deluxe == true && <p class="cardstags">deluxe</p>} <p class="cardstags">•</p> {nyproduceret == true && <p class="cardstags">nyproduceret</p>} </div>
   <div>
     <p class="cards-time-horizontal"></p>
   </div>
@@ -20,19 +20,21 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
     {beskrivelse}
   </p>
 
-  <p class="cards-item-number">Varenr. {varenummer}</p>
-  <div>
-    <img src="../src/svg/place.svg" alt="lokation"/>
-    <p class="cardslocation">{lokation}</p>
+  <div class="vareoglokationdiv">
+    <p class="cards-item-number">Varenr. {varenummer}</p>
+    <div class="lokationdiv">
+      <img src="../src/svg/place.svg" alt="lokation"/>
+      <p class="cardslocation">{lokation}</p>
+    </div>
   </div>
 
 <div class="prices">
-    <div>
+    <div class="nuprisdiv">
         <h3 class="cardspricedescription">Nuværende bud</h3>
 <p class="cardspricetext">{nupris}</p>
     </div>
  
-    <div>
+    <div class="koebnuprisdiv">
         <h3 class="cardspricedescription">Køb nu</h3>
 <p class="cardspricetext">{koebnupris}</p>
     </div>
@@ -48,28 +50,6 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
 
 <style>
 
-
-  .paddingcards{
-padding: var(--spacing-medium);
-  }
- 
-  .prices {
-  border-top: solid 1px var(--color-background-body);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.countdown {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-}
-
-#alltags {
-  display: flex;
-}
 article {
   position: relative;
   display: flex;
@@ -77,7 +57,48 @@ article {
   max-width: 1134px;
   box-shadow: var(--shadow-card-shadow);
   border-radius: var(--radius-border);
-  
+}
+  .paddingcards{
+padding: var(--spacing-medium);
+  }
+ 
+  .prices {
+  border-top: solid 1px var(--color-primary-body);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: var(--spacing-medium);
+}
+
+.nuprisdiv {
+  align-items: center;
+}
+.koebnuprisdiv{
+  align-items: center;
+}
+
+.countdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vareoglokationdiv {
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+#alltags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.lokationdiv {
+  display: flex;
+  gap: 0.5rem;
 }
 
 

@@ -53,6 +53,8 @@ body {
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-body);
   line-height: var(--line-height-lg);
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
 }
 
 .cardsbodytext {
@@ -60,6 +62,7 @@ body {
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-md);
+  margin: 0;
 }
 
 .cardspricetext {
@@ -67,6 +70,7 @@ body {
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary-body);
   line-height: var(--line-height-lg);
+  margin: 0;
 }
 
 .cardspricedescription {
@@ -74,6 +78,8 @@ body {
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-base);
+  text-align: center;
+  margin: 0;
 }
 
 .cardspricedescription {
@@ -90,6 +96,7 @@ body {
   color: var(--color-text-gray);
   text-transform: uppercase;
   line-height: var(--line-height-sm);
+  margin: 0;
 }
 
 .cardslocation {
@@ -97,6 +104,7 @@ body {
   font-weight: var(--font-weight-regular);
   color: var(--color-text-lightgray);
   line-height: var(--line-height-base);
+  margin: 0;
 }
 
 .cards-item-number {
@@ -104,20 +112,22 @@ body {
   font-weight: var(--font-weight-regular);
   color: var(--color-text-lightgray);
   line-height: var(--line-height-base);
+  margin: 0;
 }
 
-.cards-item-number {
+/* .cards-item-number {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-light);
   color: var(--color-text-lightgray);
   line-height: var(--line-height-base);
-}
+} */
 
 .cards-time-horizontal {
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-md);
+  margin: 0;
 }
 
 .cards-time-vertical {
