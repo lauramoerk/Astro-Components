@@ -189,5 +189,22 @@ body {
   line-height: var(--line-height-base);
 }
 
+.navigation-top-links{
+  font-size: var(--font-size-base);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-body);
+  line-height: var(--line-height-base);
+}
+
+.navigation-main-links{
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-lg);
+  color: var(--color-primary-body);
+}
+
+
 
 
