@@ -249,19 +249,19 @@ h3 {
 }
 
 .navigation-top-links{
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   text-transform: var(--text-uppercase);
   font-weight: var(--font-weight-regular);
-  color: var(--color-primary-body);
+  color: var(--color-text-white);
   line-height: var(--line-height-base);
 }
 
 .navigation-main-links{
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   text-transform: var(--text-uppercase);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-lg);
-  color: var(--color-primary-body);
+  color: var(--color-text-white);
 }
 
 .button-place-bid {

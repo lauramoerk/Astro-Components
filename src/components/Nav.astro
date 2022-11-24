@@ -4,8 +4,7 @@
 <nav>
     <div class="nav1st">
         <ul>
-            <li class="navigation-top-links">Nyheder</li>
-            <li class="navigation-top-links">Hjælp</li>
+         <a href="#">  <li class="navigation-top-links">Hjælp</li></a> 
         </ul>
         <div class="switch">
             <input
@@ -15,13 +14,34 @@
             />
             <label for="language-toggle"></label>
 
-            <span class="on">DK</span>
-            <span class="off">ENG</span>
+            <span class="on navigation-top-links">DK</span>
+            <span class="off navigation-top-links">ENG</span>
         </div>
     </div>
     <div class="nav2nd">
-        <!-- <img src="" alt=""> -->
-        <div></div>
+        <img src="../src/svg/LAURITZlogo-white.svg" alt="Logo">
+        <div class="left">
+            <form >
+                <input class="searchbar" type="search" placeholder="SØG" aria-label="Search">
+              </form>
+              <div class="user">
+<img src="../src/svg/user.svg" alt="">
+<a class="navigation-main-links" href="#">Log ind</a>
+              </div>
+        </div>
+
+    </div>
+    <div class="nav3rd ">
+        <ul class="navigation-main-links">
+       <a href="#"><li>Både og biler</li></a> 
+       <a href="#"><li>Elektronik</li></a> 
+       <a href="#"><li>Møbler</li></a> 
+       <a href="#"><li>Kunst</li></a> 
+       <a href="#"><li>Smykker</li></a> 
+       <a href="#"><li>Samlinger</li></a> 
+       <a href="#"><li>Andet</li></a> 
+
+    </ul>
     </div>
 </nav>
 
@@ -32,8 +52,20 @@
         justify-content: end;
         gap: 10px;
         border-bottom: var(--color-background-body) 2px solid;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    padding-right: 10px;
+
     }
 
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        padding: 0px;
+        margin: var(--margin-none);
+    }
 
     .switch {
         position: relative;
@@ -43,7 +75,7 @@
 
     .switch > span {
         position: absolute;
-        top: 14px;
+        top: 6px;
         pointer-events: none;
         font-family: "Lato", sans-serif;
         font-weight: bold;
@@ -59,7 +91,7 @@
     }
 
     input.check-toggle-round-flat:checked ~ .on {
-        color: var(--color-background-body);
+        color: var(--color-primary-body);
     }
 
     .switch > span.on {
@@ -91,7 +123,7 @@
         padding: 2px;
         width: 97px;
         height: 34px;
-        /* background-color: var(--color-background-body); */
+        background-color: var(--color-text-lightgray); 
         border-radius: 60px;
     }
     input.check-toggle-round-flat + label:before,
@@ -106,7 +138,7 @@
         left: 2px;
         bottom: 2px;
         right: 2px;
-        background-color: var(--color-background-body);
+        background-color: var(--color-text-white);
 
         border-radius: 60px;
     }
@@ -115,7 +147,7 @@
         left: 4px;
         bottom: 4px;
         width: 48px;
-        background-color: var(--color-background-body);
+        background-color: var(--color-text-lightgray);
         border-radius: 52px;
         transition: margin 0.2s;
     }
@@ -126,4 +158,66 @@
     input.check-toggle-round-flat:checked + label:after {
         margin-left: 44px;
     }
+.nav2nd{
+    background-color: var(--color-secondary);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+.searchbar{
+    width: 300px;
+    text-align: right;
+    height: 35px;
+    border-radius: var(--radius-button-border);
+}
+
+.user{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav3rd{
+    background-color: var(--color-secondary);
+    margin: var(--margin-none);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav3rd ul{
+    display:flex ;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+    color: var(--color-text-white);
+}
+a:visited{
+    text-decoration: none;
+    color: var(--color-text-white);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--color-text-white);
+}
+
+a:active{
+    text-decoration: none;
+    color: var(--color-text-white);
+}
+
 </style>
