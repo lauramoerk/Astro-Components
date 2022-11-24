@@ -3,21 +3,25 @@
 const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupris, vurderingspris, nupris, tid} = Astro.props;
 ---
 
-<article class={deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret"} >
+<article id="vertical" class={deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret"} >
 <img src="../src/jpg/productpic.jpg" alt="productimage"/>
 
 <div class="paddingcards"> 
    <div class="countdown">
-    <img src="../src/svg/timer.svg" alt="timer"/>
-    <p class="cards-time-horizontal">{tid}</p>
+    <img src="../src/svg/timer-white.svg" alt="timer"/>
+    <p class="cards-time-vertical">{tid}</p>
     </div> 
   <div id="alltags" >{deluxe == true && <p class="cardstags">deluxe</p>} <p class="cardstags">•</p> {nyproduceret == true && <p class="cardstags">nyproduceret</p>} </div>
   <div>
     <p class="cards-time-horizontal"></p>
   </div>
   <h3 class="cardsh1">{titel}</h3>
-  <p class="cardsbodytext-horizontal">
-    {beskrivelse}
+  <p class="cardsbodytext">
+    <details>
+        <summary>Lounge hvilestol 'Ægget', med vippeanordning.</summary>
+        {beskrivelse}
+    </details>
+    
   </p>
 
   <div class="vareoglokationdiv">
@@ -31,17 +35,17 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
 <div class="prices">
     <div class="nuprisdiv">
         <h3 class="cardspricedescription">Nuværende bud</h3>
-<p class="cardspricetext-horizontal">{nupris}</p>
+<p class="cardspricetext-vertical">{nupris}</p>
     </div>
  
     <div class="koebnuprisdiv">
         <h3 class="cardspricedescription">Køb nu</h3>
-<p class="cardspricetext-horizontal">{koebnupris}</p>
+<p class="cardspricetext-vertical">{koebnupris}</p>
     </div>
 
-    <div>
+    <div class="vurderetdiv">
         <h3 class="cardspricedescription">Vurderet til</h3>
-<p class="cardspricetext-horizontal">{vurderingspris}</p>
+<p class="cardspricetext-vertical">{vurderingspris}</p>
     </div>
 </div>
 
@@ -51,10 +55,12 @@ const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupr
 <style>
 
 article {
+    margin: 10rem;
   position: relative;
   display: flex;
-  height: 379px;
-  max-width: 1134px;
+  flex-direction: column;
+  height: fit-content;
+  max-width: 323px;
   box-shadow: var(--shadow-card-shadow);
   border-radius: var(--radius-border);
 }
@@ -65,24 +71,37 @@ padding: var(--spacing-medium);
   .prices {
   border-top: solid 1px var(--color-primary-body);
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
+  flex-direction: column;
   justify-content: space-between;
   padding-top: var(--spacing-medium);
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-bottom: 20px;
 }
 
 .nuprisdiv {
   align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .koebnuprisdiv{
   align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.vurderetdiv {
+    align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .countdown {
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
   display: flex;
   gap: 0.5rem;
 }
@@ -90,6 +109,8 @@ padding: var(--spacing-medium);
 .vareoglokationdiv {
   margin-top: var(--spacing-small);
   margin-bottom: var(--spacing-medium);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #alltags {
@@ -102,7 +123,6 @@ padding: var(--spacing-medium);
   display: flex;
   gap: 0.2rem;
 }
-
 
 
 </style>

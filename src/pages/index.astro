@@ -1,35 +1,65 @@
 ---
+import Colors from "../components/Colors.astro";
+import Typography from "../components/Typography.astro";
+import Buttonbid from "../components/Buttonbid.astro";
+import Buttonkup from "../components/Buttonkup.astro";
 import Cd from "../components/Cd.astro";
+import Cdvertical from "../components/Cdvertical.astro";
 import Nav from "../components/Nav.astro";
-import '../styles/global.css';
+import "../styles/global.css";
 ---
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-	<link rel="icon" type="image/x-icon" href="../src/svg/favicon.svg">
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Components</h1>
-	<h2>for Lauritz.com</h2>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="../src/svg/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Components</h1>
+		<h2>for Lauritz.com</h2>
 
+		<h3>Colors</h3>
+		<Colors />
+		<h3>Typography</h3>
+		<Typography />
+		<h3>Buttons</h3>
+		<div class="buttonsdiv">
+			<Buttonbid/>
+			<div class="backgroundbutton"><Buttonkup/></div>
+		</div>
+
+		<h3>Cards component - horizontal</h3>
 		<Cd
-		deluxe={true}
-		nyproduceret={true}
-		titel="Ægget af Arne Jacobsen"
-		beskrivelse="Lounge hvilestol, 'Ægget', med vippeanordning. Betrukket med uld, drejelig midtersøjle med firpas fod af aluminium. Formgivet i 1958-59 som en del af totalindretningen i Hotel Royal København. Fremstillet og stemplet hos Fritz Hansen. Alm. brugsspor."
-		varenummer="2345678"
-		lokation="Roskilde, Store Hedevej"
-		koebnupris="21.500 DKK"
-		vurderingspris="25.000 DKK"
-		nupris="19.500 DKK"
-		tid="03:20:59"
-/>
+			deluxe={true}
+			nyproduceret={true}
+			titel="Ægget af Arne Jacobsen"
+			beskrivelse="Lounge hvilestol, 'Ægget', med vippeanordning. Betrukket med uld, drejelig midtersøjle med firpas fod af aluminium. Formgivet i 1958-59 som en del af totalindretningen i Hotel Royal København. Fremstillet og stemplet hos Fritz Hansen. Alm. brugsspor."
+			varenummer="2345678"
+			lokation="Roskilde, Store Hedevej"
+			koebnupris="21.500 DKK"
+			vurderingspris="25.000 DKK"
+			nupris="19.500 DKK"
+			tid="03:20:59"
+		/>
+		<h3>Cards component - vertical</h3>
 
-<Nav />
+		<Cdvertical
+			deluxe={true}
+			nyproduceret={true}
+			titel="Ægget af Arne Jacobsen"
+			beskrivelse="Betrukket med uld, drejelig midtersøjle med firpas fod af aluminium. Formgivet i 1958-59 som en del af totalindretningen i Hotel Royal København. Fremstillet og stemplet hos Fritz Hansen. Alm. brugsspor."
+			varenummer="2345678"
+			lokation="Roskilde, Store Hedevej"
+			koebnupris="21.500 DKK"
+			vurderingspris="25.000 DKK"
+			nupris="19.500 DKK"
+			tid="03:20:59"
+		/>
 
-
-  </body>
+		<h3>Navigation component</h3>
+		<Nav />
+	</body>
 </html>
