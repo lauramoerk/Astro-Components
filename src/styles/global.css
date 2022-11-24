@@ -1,11 +1,7 @@
 @import url("https://use.typekit.net/scp8zgb.css");
 
 :root {
-  /* font weight */
-  --font-weight-light: 300;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-regular: 400;
+  
   /* colors */
   --color-background-body: #ffffff;
   --color-primary-body: #000000;
@@ -33,6 +29,13 @@
   /* fontfamily */
   --font-family-body: lato;
   --font-family-headings: Palatino Linotype, serif;
+  /* font weight */
+  --font-weight-light: 300;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  /* text transform */
+  --text-uppercase: uppercase;
   /* font size */
   --font-size-xxxxl: 64.1px;
   --font-size-xxxl: clamp(2.67rem, 2.8vw + 1.97rem, 4.21rem);
@@ -66,11 +69,11 @@ h1, h2 {
 }
 
 h1 {
-  margin-bottom: 0;
+  margin-bottom: var(--margin-none);
 }
 
 h2 {
-  margin-top: 0;
+  margin-top: var(--margin-none);
 }
 
 
@@ -88,7 +91,7 @@ h2 {
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-md);
-  margin: 0;
+  margin: var(--margin-none);
 }
 
 .cardspricetext {
@@ -96,7 +99,7 @@ h2 {
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary-body);
   line-height: var(--line-height-lg);
-  margin: 0;
+  margin: var(--margin-none);
 }
 
 .cardspricedescription {
@@ -104,15 +107,15 @@ h2 {
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-base);
-  text-align: center;
-  margin: 0;
+  text-align: var(--text-uppercase);
+  margin: var(--margin-none);
 }
 
 .cardspricedescription {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
   color: var(--color-text-lightgray);
-  text-transform: uppercase;
+  text-transform: var(--text-uppercase);
   line-height: var(--line-height-base);
 }
 
@@ -120,9 +123,9 @@ h2 {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-gray);
-  text-transform: uppercase;
+  text-transform: var(--text-uppercase);
   line-height: var(--line-height-sm);
-  margin: 0;
+  margin: var(--margin-none);
 }
 
 .cardslocation {
@@ -130,7 +133,7 @@ h2 {
   font-weight: var(--font-weight-regular);
   color: var(--color-text-lightgray);
   line-height: var(--line-height-base);
-  margin: 0;
+  margin: var(--margin-none);
 }
 
 .cards-item-number {
@@ -138,7 +141,7 @@ h2 {
   font-weight: var(--font-weight-regular);
   color: var(--color-text-lightgray);
   line-height: var(--line-height-base);
-  margin: 0;
+  margin: var(--margin-none);
 }
 
 /* .cards-item-number {
@@ -153,7 +156,7 @@ h2 {
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-md);
-  margin: 0;
+  margin: var(--margin-none);
 }
 
 .cards-time-vertical {
@@ -168,7 +171,7 @@ h2 {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-white);
   line-height: var(--line-height-base);
-  text-transform: uppercase;
+  text-transform: var(--text-uppercase);
 }
 
 .display-button {
@@ -176,7 +179,7 @@ h2 {
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-white);
   line-height: var(--line-height-xxxl);
-  text-transform: uppercase;
+  text-transform: var(--text-uppercase);
 }
 
 .display-text {
@@ -210,14 +213,14 @@ h2 {
 .link {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
-  text-decoration: underline;
+  text-decoration: var(--text-uppercase);
   color: var(--color-accent);
   line-height: var(--line-height-base);
 }
 
 .navigation-top-links{
   font-size: var(--font-size-base);
-  text-transform: uppercase;
+  text-transform: var(--text-uppercase);
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-body);
   line-height: var(--line-height-base);
@@ -225,7 +228,7 @@ h2 {
 
 .navigation-main-links{
   font-size: var(--font-size-lg);
-  text-transform: uppercase;
+  text-transform: var(--text-uppercase);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-lg);
   color: var(--color-primary-body);
