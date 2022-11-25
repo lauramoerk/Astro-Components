@@ -1,20 +1,26 @@
 <div class="button-place-bid"><p>Afgiv bud</p></div>
 
-
 <style>
-    div { 
+    div {
+        background-color: var(--color-accent);
+        width: fit-content;
+        padding-top: var(--spacing-button-bid-padding-height);
+        padding-bottom: var(--spacing-button-bid-padding-height);
+        padding-left: var(--spacing-button-bid-padding-width);
+        padding-right: var(--spacing-button-bid-padding-width);
+        border-radius: var(--radius-button-border);
+        border: 2px solid var(--color-accent);
+        
+    }
 
-background-color: var(--color-accent);
-width: fit-content;
-padding-top: var(--spacing-button-bid-padding-height);
-padding-bottom: var(--spacing-button-bid-padding-height);
-padding-left: var(--spacing-button-bid-padding-width);
-padding-right: var(--spacing-button-bid-padding-width);
-border-radius: var(--radius-button-border);
+    div:hover {
+        background-color: var(--color-background-body);
+        cursor: pointer;
+        border: 2px solid var(--color-accent);
+        color: var(--color-accent);
     }
 
     p {
-margin: var(--margin-none);
-
+        margin: var(--margin-none);
     }
 </style>
