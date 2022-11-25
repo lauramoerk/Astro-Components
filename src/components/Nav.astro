@@ -4,7 +4,7 @@
 <nav>
     <div class="nav1st">
         <ul>
-         <a href="#">  <li class="navigation-top-links">Hjælp</li></a> 
+            <a href="#"> <li class="navigation-top-links">Hjælp</li></a>
         </ul>
         <div class="switch">
             <input
@@ -19,29 +19,32 @@
         </div>
     </div>
     <div class="nav2nd">
-        <img src="/svg/LAURITZlogo-white.svg" alt="Logo">
+        <img src="/svg/LAURITZlogo-white.svg" alt="Logo" />
         <div class="left">
-            <form >
-                <input class="searchbar" type="search" placeholder="SØG" aria-label="Search">
-              </form>
-              <div class="user">
-<img src="/svg/user.svg" alt="">
-<a class="navigation-main-links" href="#">Log ind</a>
-              </div>
+            <form>
+                <input
+                    class="searchbar"
+                    type="search"
+                    placeholder="SØG"
+                    aria-label="Search"
+                />
+            </form>
+            <div class="user">
+                <img src="/svg/user.svg" alt="" />
+                <a class="navigation-main-links" href="#">Log ind</a>
+            </div>
         </div>
-
     </div>
-    <div class="nav3rd ">
+    <div class="nav3rd">
         <ul class="navigation-main-links">
-       <a href="#"><li>Både og biler</li></a> 
-       <a href="#"><li>Elektronik</li></a> 
-       <a href="#"><li>Møbler</li></a> 
-       <a href="#"><li>Kunst</li></a> 
-       <a href="#"><li>Smykker</li></a> 
-       <a href="#"><li>Samlinger</li></a> 
-       <a href="#"><li>Andet</li></a> 
-
-    </ul>
+            <a href="#"><li>Både og biler</li></a>
+            <a href="#"><li>Elektronik</li></a>
+            <a href="#"><li>Møbler</li></a>
+            <a href="#"><li>Kunst</li></a>
+            <a href="#"><li>Smykker</li></a>
+            <a href="#"><li>Samlinger</li></a>
+            <a href="#"><li>Andet</li></a>
+        </ul>
     </div>
 </nav>
 
@@ -55,13 +58,12 @@
         display: flex;
         align-items: center;
         padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
-    ul{
+    ul {
         list-style: none;
         display: flex;
         gap: 10px;
@@ -125,7 +127,7 @@
         padding: 2px;
         width: 97px;
         height: 34px;
-        background-color: var(--color-text-lightgray); 
+        background-color: var(--color-text-lightgray);
         border-radius: 60px;
     }
     input.check-toggle-round-flat + label:before,
@@ -160,68 +162,67 @@
     input.check-toggle-round-flat:checked + label:after {
         margin-left: 44px;
     }
-.nav2nd{
-    background-color: var(--color-secondary);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    .nav2nd {
+        background-color: var(--color-secondary);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-.left{
-    display: flex;
-    align-items: center;
-}
-.searchbar{
-    width: 300px;
-    text-align: right;
-    height: 35px;
-    border-radius: var(--radius-button-border);
-    background-color: var(--color-secondary);
-    border: var(--color-text-white) 2px solid;
-}
+    .left {
+        display: flex;
+        align-items: center;
+    }
+    .searchbar {
+        width: 300px;
+        text-align: right;
+        height: 35px;
+        border-radius: var(--radius-button-border);
+        background-color: var(--color-secondary);
+        border: var(--color-text-white) 2px solid;
+    }
 
-.user{
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+    .user {
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 
-.nav3rd{
-    background-color: var(--color-secondary);
-    margin: var(--margin-none);
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.nav3rd ul{
-    display:flex ;
-}
+    .nav3rd {
+        background-color: var(--color-secondary);
+        margin: var(--margin-none);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nav3rd ul {
+        display: flex;
+    }
 
-a{
-    text-decoration: none;
-}
+    a {
+        text-decoration: none;
+    }
 
-a:link{
-    text-decoration: none;
-    color: var(--color-text-white);
-}
-a:visited{
-    text-decoration: none;
-    color: var(--color-text-white);
-}
+    a:link {
+        text-decoration: none;
+        color: var(--color-text-white);
+    }
+    a:visited {
+        text-decoration: none;
+        color: var(--color-text-white);
+    }
 
-a:hover{
-    text-decoration: none;
-    color: var(--color-text-white);
-}
+    a:hover {
+        text-decoration: none;
+        color: var(--color-text-white);
+    }
 
-a:active{
-    text-decoration: none;
-    color: var(--color-text-white);
-}
-
+    a:active {
+        text-decoration: none;
+        color: var(--color-text-white);
+    }
 </style>

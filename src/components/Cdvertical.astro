@@ -1,130 +1,141 @@
 ---
 // import '../styles/global.css';
-const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupris, vurderingspris, nupris, tid} = Astro.props;
+const {
+    titel,
+    beskrivelse,
+    deluxe,
+    nyproduceret,
+    varenummer,
+    lokation,
+    koebnupris,
+    vurderingspris,
+    nupris,
+    tid,
+} = Astro.props;
 ---
 
-<article id="vertical" class={deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret"} >
-<img src="/jpg/productpic.jpg" alt="productimage"/>
+<article
+    id="vertical"
+    class={(deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret")}
+>
+    <img src="/jpg/productpic.jpg" alt="productimage" />
 
-<div class="paddingcards"> 
-   <div class="countdown">
-    <img src="/svg/timer-white.svg" alt="timer"/>
-    <p class="cards-time-vertical">{tid}</p>
-    </div> 
-  <div id="alltags" >{deluxe == true && <p class="cardstags">deluxe</p>} <p class="cardstags">•</p> {nyproduceret == true && <p class="cardstags">nyproduceret</p>} </div>
-  <div>
-    <p class="cards-time-horizontal"></p>
-  </div>
-  <h3 class="cardsh1">{titel}</h3>
-  <p class="cardsbodytext">
-    <details>
-        <summary>Lounge hvilestol 'Ægget', med vippeanordning.</summary>
-        {beskrivelse}
-    </details>
-    
-  </p>
+    <div class="paddingcards">
+        <div class="countdown">
+            <img src="/svg/timer-white.svg" alt="timer" />
+            <p class="cards-time-vertical">{tid}</p>
+        </div>
+        <div id="alltags">
+            {deluxe == true && <p class="cardstags">deluxe</p>}
+            <p class="cardstags">•</p>
+            {nyproduceret == true && <p class="cardstags">nyproduceret</p>}
+        </div>
+        <div>
+            <p class="cards-time-horizontal"></p>
+        </div>
+        <h3 class="cardsh1">{titel}</h3>
+        <p class="cardsbodytext">
+            <details>
+                <summary>Lounge hvilestol 'Ægget', med vippeanordning.</summary>
+                {beskrivelse}
+            </details>
+        </p>
 
-  <div class="vareoglokationdiv">
-    <p class="cards-item-number">Varenr. {varenummer}</p>
-    <div class="lokationdiv">
-      <img src="/svg/place.svg" alt="lokation"/>
-      <p class="cardslocation">{lokation}</p>
+        <div class="vareoglokationdiv">
+            <p class="cards-item-number">Varenr. {varenummer}</p>
+            <div class="lokationdiv">
+                <img src="/svg/place.svg" alt="lokation" />
+                <p class="cardslocation">{lokation}</p>
+            </div>
+        </div>
+
+        <div class="prices">
+            <div class="nuprisdiv">
+                <h3 class="cardspricedescription">Nuværende bud</h3>
+                <p class="cardspricetext-vertical">{nupris}</p>
+            </div>
+
+            <div class="koebnuprisdiv">
+                <h3 class="cardspricedescription">Køb nu</h3>
+                <p class="cardspricetext-vertical">{koebnupris}</p>
+            </div>
+
+            <div class="vurderetdiv">
+                <h3 class="cardspricedescription">Vurderet til</h3>
+                <p class="cardspricetext-vertical">{vurderingspris}</p>
+            </div>
+        </div>
     </div>
-  </div>
-
-<div class="prices">
-    <div class="nuprisdiv">
-        <h3 class="cardspricedescription">Nuværende bud</h3>
-<p class="cardspricetext-vertical">{nupris}</p>
-    </div>
- 
-    <div class="koebnuprisdiv">
-        <h3 class="cardspricedescription">Køb nu</h3>
-<p class="cardspricetext-vertical">{koebnupris}</p>
-    </div>
-
-    <div class="vurderetdiv">
-        <h3 class="cardspricedescription">Vurderet til</h3>
-<p class="cardspricetext-vertical">{vurderingspris}</p>
-    </div>
-</div>
-
- </div>   
 </article>
 
 <style>
+    article {
+        margin: 10rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        max-width: 323px;
+        box-shadow: var(--shadow-card-shadow);
+        border-radius: var(--radius-border);
+        overflow: hidden;
+    }
+    .paddingcards {
+        padding: var(--spacing-medium);
+    }
 
-article {
-    margin: 10rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  max-width: 323px;
-  box-shadow: var(--shadow-card-shadow);
-  border-radius: var(--radius-border);
-  overflow: hidden;
-}
-  .paddingcards{
-padding: var(--spacing-medium);
-  }
- 
-  .prices {
-  border-top: solid 1px var(--color-primary-body);
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: var(--spacing-medium);
-  margin-bottom: 20px;
-}
+    .prices {
+        border-top: solid 1px var(--color-primary-body);
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: var(--spacing-medium);
+        margin-bottom: 20px;
+    }
 
-.nuprisdiv {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-.koebnuprisdiv{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
+    .nuprisdiv {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .koebnuprisdiv {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
 
-.vurderetdiv {
-    align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
+    .vurderetdiv {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
 
-.countdown {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  gap: 0.5rem;
-}
+    .countdown {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        gap: 0.5rem;
+    }
 
-.vareoglokationdiv {
-  margin-top: var(--spacing-small);
-  margin-bottom: var(--spacing-medium);
-  padding-left: 20px;
-  padding-right: 20px;
-}
+    .vareoglokationdiv {
+        margin-top: var(--spacing-small);
+        margin-bottom: var(--spacing-medium);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-#alltags {
-  display: flex;
-  gap: 0.5rem;
-}
+    #alltags {
+        display: flex;
+        gap: 0.5rem;
+    }
 
-
-.lokationdiv {
-  display: flex;
-  gap: 0.2rem;
-}
-
-
+    .lokationdiv {
+        display: flex;
+        gap: 0.2rem;
+    }
 </style>
-

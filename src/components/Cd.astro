@@ -1,110 +1,120 @@
 ---
 // import '../styles/global.css';
-const { titel, beskrivelse, deluxe, nyproduceret, varenummer, lokation, koebnupris, vurderingspris, nupris, tid} = Astro.props;
+const {
+    titel,
+    beskrivelse,
+    deluxe,
+    nyproduceret,
+    varenummer,
+    lokation,
+    koebnupris,
+    vurderingspris,
+    nupris,
+    tid,
+} = Astro.props;
 ---
 
-<article class={deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret"} >
-<img src="/jpg/productpic.jpg" alt="productimage"/>
+<article
+    class={(deluxe == true && "Deluxe", nyproduceret == true && "nyproduceret")}
+>
+    <img src="/jpg/productpic.jpg" alt="productimage" />
 
-<div class="paddingcards"> 
-   <div class="countdown">
-    <img src="/svg/timer.svg" alt="timer"/>
-    <p class="cards-time-horizontal">{tid}</p>
-    </div> 
-  <div id="alltags" >{deluxe == true && <p class="cardstags">deluxe</p>} <p class="cardstags">•</p> {nyproduceret == true && <p class="cardstags">nyproduceret</p>} </div>
-  <div>
-    <p class="cards-time-horizontal"></p>
-  </div>
-  <h3 class="cardsh1">{titel}</h3>
-  <p class="cardsbodytext-horizontal">
-    {beskrivelse}
-  </p>
+    <div class="paddingcards">
+        <div class="countdown">
+            <img src="/svg/timer.svg" alt="timer" />
+            <p class="cards-time-horizontal">{tid}</p>
+        </div>
+        <div id="alltags">
+            {deluxe == true && <p class="cardstags">deluxe</p>}
+            <p class="cardstags">•</p>
+            {nyproduceret == true && <p class="cardstags">nyproduceret</p>}
+        </div>
+        <div>
+            <p class="cards-time-horizontal"></p>
+        </div>
+        <h3 class="cardsh1">{titel}</h3>
+        <p class="cardsbodytext-horizontal">
+            {beskrivelse}
+        </p>
 
-  <div class="vareoglokationdiv">
-    <p class="cards-item-number">Varenr. {varenummer}</p>
-    <div class="lokationdiv">
-      <img src="/svg/place.svg" alt="lokation"/>
-      <p class="cardslocation">{lokation}</p>
+        <div class="vareoglokationdiv">
+            <p class="cards-item-number">Varenr. {varenummer}</p>
+            <div class="lokationdiv">
+                <img src="/svg/place.svg" alt="lokation" />
+                <p class="cardslocation">{lokation}</p>
+            </div>
+        </div>
+
+        <div class="prices">
+            <div class="nuprisdiv">
+                <h3 class="cardspricedescription">Nuværende bud</h3>
+                <p class="cardspricetext-horizontal">{nupris}</p>
+            </div>
+
+            <div class="koebnuprisdiv">
+                <h3 class="cardspricedescription">Køb nu</h3>
+                <p class="cardspricetext-horizontal">{koebnupris}</p>
+            </div>
+
+            <div>
+                <h3 class="cardspricedescription">Vurderet til</h3>
+                <p class="cardspricetext-horizontal">{vurderingspris}</p>
+            </div>
+        </div>
     </div>
-  </div>
-
-<div class="prices">
-    <div class="nuprisdiv">
-        <h3 class="cardspricedescription">Nuværende bud</h3>
-<p class="cardspricetext-horizontal">{nupris}</p>
-    </div>
- 
-    <div class="koebnuprisdiv">
-        <h3 class="cardspricedescription">Køb nu</h3>
-<p class="cardspricetext-horizontal">{koebnupris}</p>
-    </div>
-
-    <div>
-        <h3 class="cardspricedescription">Vurderet til</h3>
-<p class="cardspricetext-horizontal">{vurderingspris}</p>
-    </div>
-</div>
-
- </div>   
 </article>
 
 <style>
+    article {
+        position: relative;
+        display: flex;
+        height: 379px;
+        max-width: 1134px;
+        box-shadow: var(--shadow-card-shadow);
+        border-radius: var(--radius-border);
+        overflow: hidden;
+    }
+    .paddingcards {
+        padding: var(--spacing-medium);
+    }
 
-article {
-  position: relative;
-  display: flex;
-  height: 379px;
-  max-width: 1134px;
-  box-shadow: var(--shadow-card-shadow);
-  border-radius: var(--radius-border);
-  overflow: hidden;
-}
-  .paddingcards{
-padding: var(--spacing-medium);
-  }
- 
-  .prices {
-  border-top: solid 1px var(--color-primary-body);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: var(--spacing-medium);
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
+    .prices {
+        border-top: solid 1px var(--color-primary-body);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: var(--spacing-medium);
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 
-.nuprisdiv {
-  align-items: center;
-}
-.koebnuprisdiv{
-  align-items: center;
-}
+    .nuprisdiv {
+        align-items: center;
+    }
+    .koebnuprisdiv {
+        align-items: center;
+    }
 
-.countdown {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 0.5rem;
-}
+    .countdown {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 0.5rem;
+    }
 
-.vareoglokationdiv {
-  margin-top: var(--spacing-small);
-  margin-bottom: var(--spacing-medium);
-}
+    .vareoglokationdiv {
+        margin-top: var(--spacing-small);
+        margin-bottom: var(--spacing-medium);
+    }
 
-#alltags {
-  display: flex;
-  gap: 0.5rem;
-}
+    #alltags {
+        display: flex;
+        gap: 0.5rem;
+    }
 
-
-.lokationdiv {
-  display: flex;
-  gap: 0.2rem;
-}
-
-
-
+    .lokationdiv {
+        display: flex;
+        gap: 0.2rem;
+    }
 </style>
-
